@@ -1,0 +1,14 @@
+# LiveKit Agents SDK
+livekit-agents>=1.0.0
+
+# Mistral AI — STT, LLM, and TTS
+livekit-plugins-mistralai>=0.1.0
+
+# Anam — lip-synced avatar face
+livekit-plugins-anam>=0.1.0
+
+# Silero — voice activity detection
+livekit-plugins-silero>=0.7.0
+
+# Utilities
+python-dotenv>=1.0.0
