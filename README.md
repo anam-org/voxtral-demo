@@ -29,32 +29,45 @@ You'll need API keys from three services:
 2. **Anam** — [lab.anam.ai](https://lab.anam.ai) — renders the avatar face
 3. **LiveKit** — [cloud.livekit.io](https://cloud.livekit.io) — WebRTC infrastructure (free tier works)
 
-## Setup
+## Quick Start
+
+### 1. Set up the agent (Python)
 
 ```bash
-# Clone the repo
 git clone https://github.com/anam-org/voxtral-demo.git
 cd voxtral-demo
 
-# Create a virtual environment
 python -m venv .venv
 source .venv/bin/activate
-
-# Install dependencies
 pip install -r requirements.txt
 
-# Configure API keys
 cp .env.example .env
-# Edit .env with your keys
+# Edit .env with your API keys
 ```
 
-## Run
+### 2. Set up the web frontend (Next.js)
 
+```bash
+cd web
+npm install
+cp .env.local.example .env.local
+# Edit .env.local with your LiveKit credentials
+```
+
+### 3. Run both
+
+In one terminal — start the agent:
 ```bash
 python agent.py dev
 ```
 
-This starts the agent and connects it to your LiveKit server. To interact with it, open the [LiveKit Agents Playground](https://agents-playground.livekit.io) and connect to the same LiveKit project. You should see the avatar appear as a video participant.
+In another terminal — start the frontend:
+```bash
+cd web
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) and click **Start Conversation**.
 
 ## Configuration
 
