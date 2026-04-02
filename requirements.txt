@@ -1,0 +1,17 @@
+# LiveKit Agents SDK
+livekit-agents>=1.0.0
+
+# Mistral AI — STT, LLM, and TTS (installed from git for TTS support)
+livekit-plugins-mistralai @ git+https://github.com/livekit/agents.git@main#subdirectory=livekit-plugins/livekit-plugins-mistralai
+
+# Anam — lip-synced avatar face
+livekit-plugins-anam>=0.1.0
+
+# Deepgram — streaming STT (low latency)
+livekit-plugins-deepgram>=1.0.0
+
+# Silero — voice activity detection
+livekit-plugins-silero>=0.7.0
+
+# Utilities
+python-dotenv>=1.0.0
